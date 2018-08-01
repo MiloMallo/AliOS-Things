@@ -578,7 +578,7 @@ static void exit_cmd(char *buf, int len, int argc, char **argv)
 
 static void devname_cmd(char *buf, int len, int argc, char **argv)
 {
-    aos_cli_printf("device name: %s\r\n", SYSINFO_DEVICE_NAME);
+    aos_cli_printf("device name: %s\r\n", "");//SYSINFO_DEVICE_NAME);	//mallo
 }
 
 
@@ -800,7 +800,7 @@ int cli_getchar(char *inbuf)
     uart_dev_t uart_stdio;
 
     memset(&uart_stdio, 0, sizeof(uart_stdio));
-    uart_stdio.port = 0;
+    uart_stdio.port = 1; //=0;  //mallo  
 
     ret = hal_uart_recv_II(&uart_stdio, inbuf,  1, &recv_size,  HAL_WAIT_FOREVER);
 

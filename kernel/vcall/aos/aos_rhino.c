@@ -28,7 +28,7 @@ int aos_get_hz(void)
 
 const char *aos_version_get(void)
 {
-    return SYSINFO_KERNEL_VERSION;
+    return "";//SYSINFO_KERNEL_VERSION;//mallo
 }
 
 #if (RHINO_CONFIG_KOBJ_DYN_ALLOC > 0)

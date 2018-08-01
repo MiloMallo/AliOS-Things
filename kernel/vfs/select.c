@@ -13,9 +13,9 @@
 #include <string.h>
 #include <vfs_file.h>
 
-#if defined(__ICCARM__) || defined(__CC_ARM)
+//#if defined(__ICCARM__) || defined(__CC_ARM)  //mallo
 #include <sys/select.h>
-#endif
+//#endif
 
 #ifdef IO_NEED_TRAP
 #include <vfs_trap.h>
